@@ -1,8 +1,8 @@
 # Data Analysis Tool - Aleksander Opałka - s24399
 
 ## Overview
-This python data analysis tool with functionalities for loading datasets, performing data wrangling operations, and conducting exploratory data analysis.
- The project includes a command-line user interface for interacting with the tool.
+This python data analysis tool is a program with functionalities designed for loading datasets, performing data wrangling operations, and conducting exploratory data analysis.
+ The project includes a command-line user interface for interacting with the tool (implementing Singleton design pattern)
 
 ## Modules
 
@@ -20,15 +20,14 @@ This python data analysis tool with functionalities for loading datasets, perfor
 
 ### plot_module.py
 
-- **show_histogram** generates and displays histograms for specified columns in a DataFrame.
-- **make_pie_chart_percent** creates and displays a pie chart showing percentage distribution of values from a given Series with a specified title.
-- **make_bar_plot_counts** creates and displays a bar plot for value counts from a Series, with specified colors, title, and axis labels, and annotates each bar with its height.
-- **make_sns_plot** uses Seaborn to create and display a bar plot showing the average of a specified value grouped by a specified parameter, with appropriate titles and labels.
-
+- *show_histogram* generates and displays histograms for specified columns in a DataFrame.
+- *make_pie_chart_percent* creates and displays a pie chart showing percentage distribution of values from a given Series with a specified title.
+- *make_bar_plot_counts* creates and displays a bar plot for value counts from a Series, with specified colors, title, and axis labels, and annotates each bar with its height.
+- *make_sns_plot* uses Seaborn (instead of only Matplotlib library) to create and display a bar plot showing the average of a specified value grouped by a specified parameter, with appropriate titles and labels.
 
 ### dataset.py
 
-- The Dataset class encapsulates a dataset with its raw and processed DataFrames, as well as its name and filename. It provides methods to retrieve the raw DataFrame (get_raw_df), dataset name (get_name), filename (get_filename), and processed DataFrame (get_processed_df). Additionally, it allows setting a new processed DataFrame using the set_processed_df method.
+- The Dataset class encapsulates a dataset with its raw and processed DataFrames, as well as its name and filename. It provides methods to retrieve the raw DataFrame (get_raw_df), dataset name (get_name), filename (get_filename), and processed DataFrame (get_processed_df). Additionally, it allows setting a new processed DataFrame using the set_processed_df method. Thanks for this solution we can add different datasets and store them in memory for analysis. 
 
 ### dataset_builder.py
 
